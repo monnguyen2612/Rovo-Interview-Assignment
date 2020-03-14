@@ -1,0 +1,118 @@
+// @import '../../../commons/uikit/components/variables.scss';
+
+.chatAction {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonSettings {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #b3b3b3;
+  background: transparent;
+  color: #b3b3b3;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.buttonCompose {
+  padding: 10px 40px 10px 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #089cfb;
+  background: transparent;
+  color: #089cfb;
+  outline: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.iconCompose {
+  padding-right: 10px;
+  color: #089cfb;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.tagChat {
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.closePopup {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1111;
+
+  i {
+    font-size: 28px;
+  }
+}
+
+.contentCompose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+  .contentComposeForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .contentComposeInput {
+      border: none;
+      outline: none;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(10, 10, 10, 0.10);
+      justify-content: center;
+    }
+
+    .containerInputTagUser {
+      border-bottom: 1px solid rgba(10, 10, 10, 0.10);
+      display: flex;
+      padding: 10px 0;
+      justify-content: space-between;
+
+      &>i {
+        color: #33a0f7;
+      }
+    }
+
+    .inputTagUser {
+      border: none;
+      outline: none;
+      flex: 1;
+    }
+
+    .largeContentComposeInput {
+      border: none;
+      outline: none;
+      margin-top: 10px;
+      resize: none;
+    }
+
+    .contentComposeButton {
+      border-radius: 2px;
+      box-shadow: 0 2px 10px 0 rgba(146, 146, 146, 0.21);
+      background: #09609a;
+      padding: 10px;
+      color: #fff;
+      cursor: pointer;
+      margin-bottom: 10px;
+
+      &>i {
+        font-size: 10px;
+        color: #fff;
+        outline: none;
+      }
+    }
+  }
+}

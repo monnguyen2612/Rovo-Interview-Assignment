@@ -1,0 +1,239 @@
+$background-color: #292931;
+$button-color: #e62163;
+$button-width: 10em;
+
+.mainConversation {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+  &:before {
+    position: absolute;
+    content: "";
+    border-top: 20px solid red;
+    border-left: 20px solid transparent;
+    right: 0;
+    top: 0;
+  }
+}
+
+.titleContentContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  & > h2 {
+    font-size: 18px;
+    color: #4a4a4a;
+  }
+
+  & > p {
+    margin: 0;
+    color: #6f6f6f;
+    font-size: 16px;
+  }
+}
+
+.presentationSetting {
+  cursor: pointer;
+}
+
+.messageListContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 8px 0 8px;
+  flex: 1;
+  overflow-y: auto;
+
+  & > * {
+    overflow-anchor: none;
+  }
+}
+
+.myMessageContainer {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-top: 20px;
+
+  & > img {
+    display: none;
+  }
+
+  & > div {
+    order: 1;
+    margin-right: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(31,191,190,1);
+    border-radius: 10px;
+    padding: 10px;
+
+    & > h5 {
+      display: none;
+    }
+    & > div {
+      font-size: 14px;
+      color: #ffffff;
+      overflow-wrap: break-word;
+      max-width: 400px;
+      min-width: 100px;
+      padding: 10px;
+      padding-right: 82px;
+      margin-bottom: 0;
+    }
+
+    & > img {
+      max-width: 400px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+    & > p {
+      position: absolute;
+      color: #cacaca;
+      font-size: 12px;
+      bottom: 10px;
+      right: 20px;
+      margin: 0;
+      
+    }
+  }
+}
+
+.oppositeMessageContainer {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-top: 20px;
+
+  & > img {
+    order: 1;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+  }
+
+  & > div {
+    order: 2;
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    background-color: #fff;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    & > h5 {
+      font-size: 14px;
+      color: #767676;
+      font-weight: "bold";
+      margin: 0;
+      padding: 10px;
+      padding-bottom: 0px;
+    }
+    & > div {
+      font-size: 14px;
+      color: rgb(72, 78, 135);
+      overflow-wrap: break-word;
+      max-width: 400px;
+      min-width: 100px;
+      padding: 10px;
+      padding-top: 5px;
+      padding-right: 95px;
+      margin-bottom: 0;
+    }
+
+    & > img {
+      object-fit: cover;
+      border-radius: 8px;
+      max-width: 400px;
+      cursor: pointer;
+      margin-bottom: 25px;
+    }
+
+    & > p {
+      position: absolute;
+      color: #cacaca;
+      font-size: 12px;
+      right: 20px;
+      bottom: 10px;
+      margin: 0;
+    }
+  }
+}
+
+.anchor {
+  min-height: 1px;
+  overflow-anchor: auto;
+}
+
+.editor {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 20px;
+  min-height: 0px;
+}
+
+.inputMessage {
+  padding: 10px 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & input {
+    font-size: 0.95em;
+    flex: 15 0 0;
+    border: 0;
+    margin-bottom: 6px;
+    font-family: sans-serif;
+    padding: 12px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-left: 40px;
+    margin-right: 20px;
+  }
+}
+
+input[type="file"] {
+  cursor: pointer;
+  visibility: hidden;
+
+  &::-webkit-file-upload-button {
+    background: $button-color;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0.2em;
+  }
+
+  &::-ms-browse {
+    background: $button-color;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0.2em;
+  }
+}
+
+.systemMessage{
+  color: #bbb;
+  text-align: center;
+  &>h3{
+    text-transform: uppercase;
+  }
+}

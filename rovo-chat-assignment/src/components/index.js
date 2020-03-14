@@ -1,0 +1,1 @@
+export { AvatarChat } from './AvatarChat';
